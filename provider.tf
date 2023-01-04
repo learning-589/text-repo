@@ -10,8 +10,8 @@ terraform {
       name = "text-workspace"
     }
     
-    backend "gcs" {
-  bucket = "bucketstate"
-  }
+ #   backend "gcs" {
+ # bucket = "bucketstate"
+  #}
  }
 }
