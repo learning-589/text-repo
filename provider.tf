@@ -3,7 +3,15 @@ provider "google" {
 }
 
 terraform {
-  backend "gcs" {
-    bucket = "bucketstate"
+  cloud {
+    organization = "learning-589"
+
+    workspaces {
+      name = "text-workspace"
+    }
+    
+    backend "gcs" {
+  bucket = "bucketstate"
   }
+ }
 }
