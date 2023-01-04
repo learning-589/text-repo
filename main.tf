@@ -5,7 +5,7 @@ resource "google_service_account" "default" {
 
 resource "google_compute_instance" "default" {
   name         = "test"
-  machine_type = "e2-medium"
+  machine_type = "n1-standard-1"
   zone         = var.zone
 
   tags = ["foo", "bar"]
@@ -19,10 +19,6 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  // Local SSD disk
-  scratch_disk {
-    interface = "SCSI"
-  }
 
   network_interface {
     network = "default"
