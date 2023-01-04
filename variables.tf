@@ -3,7 +3,7 @@ variable "project_id" {
   description = "The Google Cloud Project Id"
 }
 
-variable "region" {
+variable "zone" {
   type    = string
   default = "us-central1-a"
 }
