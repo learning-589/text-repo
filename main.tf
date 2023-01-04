@@ -1,3 +1,8 @@
+resource "google_service_account" "default" {
+  account_id   = "text-serviceaccount"
+  display_name = "Text Service"
+}
+
 resource "google_compute_instance" "default" {
   name         = "test"
   machine_type = "e2-medium"
